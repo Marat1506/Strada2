@@ -1,0 +1,50 @@
+:root {
+    --bg-color: rgba(18, 18, 18, 1)
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.layout{
+    background: var(--bg-color);
+    height: 100dvh;
+    color: white;
+    display: flex;
+}
+.sidebar{
+    border-right: 1px solid white;
+    width: 80px;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.panel {
+    border-bottom: 1px solid white;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.children{
+    flex: 1;
+}
+
+
+.logo{
+    border-bottom: 1px solid white;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
