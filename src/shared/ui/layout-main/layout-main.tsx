@@ -1,16 +1,18 @@
 import { Box } from "@mui/material";
 import styles from './layout-main.module.scss'
 import logo from '../../assets/strada-logo.svg'
+import { Outlet } from "react-router-dom";
+
 export default function LayoutMain() {
     return (
         <Box className={styles.layout}>
             <Box className={styles.sidebar}>
                 <Box className={styles.logo}>
-                    <img src={logo}  width={60} height={60}/>
+                    <img src={logo} width={60} height={60} />
                 </Box>
 
                 <Box className={styles.menu}>
-dfd
+                    dfd
                 </Box>
             </Box>
             <Box className={styles.content}>
@@ -18,7 +20,7 @@ dfd
                     panel
                 </Box>
                 <Box className={styles.children}>
-                    children
+                    <Outlet />
                 </Box>
             </Box>
         </Box>
