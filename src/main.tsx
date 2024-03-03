@@ -12,31 +12,34 @@ import Users from './pages/users/users.tsx'
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />
+    element: <App />,
+    children: [
+      {
+        path: '/panel',
+        element: <Panel />
+      },
+      {
+        path: '/payments',
+        element: <Payments />
+      },
+      {
+        path: '/roadmaps',
+        element: <Roadmaps />
+      },
+      {
+        path: '/tasks',
+        element: <Tasks />
+      },
+      {
+        path: '/users',
+        element: <Users />
+      }
+    ]
   },
-  {
-    path: '/panel',
-    element: <Panel />
-  },
-  {
-    path: '/payments',
-    element: <Payments />
-  },
-  {
-    path: '/roadmaps',
-    element: <Roadmaps />
-  },
-  {
-    path: '/tasks',
-    element: <Tasks />
-  },
-  {
-    path: '/users',
-    element: <Users />
-  }
+
 ])
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )
